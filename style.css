@@ -30,10 +30,15 @@
     max-height: 240px;
 }
 
+#search-meal {
+    cursor: pointer;
+}
+
 .each-dish {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 #fav-icon {
@@ -62,4 +67,71 @@
 #search-result::-webkit-scrollbar-thumb:active {
     background-color: #333;
     cursor: pointer;
+}
+
+
+#dish-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+img {
+    border-radius: 10px;
+}
+
+.dish-heading {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+span {
+    text-decoration: underline;
+}
+
+#recipie-para {
+    max-width: 290px;
+    height: 90px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+
+}
+
+#readMoreLink {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+#img-ing {
+    display: flex;
+}
+
+#ingredients {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    cursor: pointer;
+    position: relative;
+    margin-left: 10px;
+}
+
+#ing-list {
+    display: none;
+    position: absolute;
+    left: 900px;
+    border: 2px dotted black;
+    border-radius: 7px;
+    padding: 15px;
+
+}
+
+.dish-heading div {
+    margin: 10px;
+}
+
+.dish-heading span {
+    margin: 10px;
 }

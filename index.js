@@ -9,7 +9,8 @@ async function handleSearchChange(input) {
         try {
             const fetchData = await fetch(`https://themealdb.com/api/json/v1/1/search.php?f=${searchValue}`);
             const jsonData = await fetchData.json();
-            const addData = jsonData.meals.map(one => ` <div class="each-dish">
+            console.log(jsonData);
+            const addData = jsonData.meals.map(one => `<div class="each-dish">
             <div id="search-meal" onclick="searchMeal(this)">${one.strMeal}</div>
             <div id="fav-icon" onclick="addToFav(this)"><i class="fa-regular fa-heart"></i></div>
         </div>`)
@@ -20,6 +21,7 @@ async function handleSearchChange(input) {
         catch (e) {
             console.log(e);
             addResult.innerHTML = 'No result found!'
+            searchValue = ""
         }
     }
 
@@ -36,12 +38,6 @@ function addToFav(e) {
 function searchMeal(e) {
     const mealName = e.innerHTML;
     console.log(mealName)
-    try {
-        const searchByName = fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`)
-        const searchByNameJson = searchByName.json();
+    window.location.href = `./dishPage.html?dishName=${mealName}`;
 
-    }
-    catch (e) {
-
-    }
 }
