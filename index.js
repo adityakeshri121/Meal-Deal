@@ -36,8 +36,6 @@ function addToFav(e) {
 }
 
 function searchMeal(e) {
-    const mealName = e.innerHTML;
-    console.log(mealName)
+    const mealName = (e.innerHTML).trim();
     window.location.href = `./dishPage.html?dishName=${mealName}`;
-
 }
