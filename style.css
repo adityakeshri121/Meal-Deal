@@ -135,3 +135,12 @@ span {
 .dish-heading span {
     margin: 10px;
 }
+
+#fav-dish-list {
+    flex-direction: row;
+    display: flex;
+}
+
+#fav-card {
+    margin: 5px;
+}
