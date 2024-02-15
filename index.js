@@ -35,9 +35,8 @@ async function handleSearchChange(input) {
 
 function addToFav(e) {
     const ele = document.getElementById('search-meal')
-    const dishToAdd = ele.innerHTML;
+    const dishToAdd = e.previousElementSibling.innerHTML.trim();
     console.log(dishToAdd)
-    console.log(ele);
 
     const dataToAdd = searchResult.meals.filter(a => a.strMeal === dishToAdd)
     console.log(dataToAdd)

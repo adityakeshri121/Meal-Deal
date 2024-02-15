@@ -14,11 +14,15 @@
     margin-top: 80px;
 }
 
+#bg-img {
+    background: url('https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+}
+
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: blanchedalmond;
 }
 
 #search-result {
@@ -33,6 +37,7 @@
 #search-meal {
     cursor: pointer;
 }
+
 
 .each-dish {
     display: flex;
@@ -118,6 +123,7 @@ span {
     margin-left: 10px;
 }
 
+
 #ing-list {
     display: none;
     position: absolute;
@@ -139,8 +145,19 @@ span {
 #fav-dish-list {
     flex-direction: row;
     display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
 }
 
 #fav-card {
     margin: 5px;
+    margin-bottom: 25px;
+}
+
+#title-open {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
 }
