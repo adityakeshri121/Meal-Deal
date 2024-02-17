@@ -32,7 +32,7 @@ function removeDish(key) {
     // Remove the corresponding div from the DOM
     const removedDiv = document.getElementById('fav-card');
     removedDiv.parentElement.removeChild(removedDiv);
-    alert('added');
+    alert('Are you sure, to remove');
 }
 
 
