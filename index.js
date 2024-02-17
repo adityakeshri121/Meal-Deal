@@ -38,7 +38,7 @@ function addToFav(e) {
     const dishToAdd = e.previousElementSibling.innerHTML.trim();
     console.log(dishToAdd)
 
-    const dataToAdd = searchResult.meals.filter(a => a.strMeal === dishToAdd)
+    const dataToAdd = searchResult.meals.find(a => a.strMeal === dishToAdd)
     console.log(dataToAdd)
 
     localStorage.setItem(dishToAdd, JSON.stringify(dataToAdd));
@@ -47,7 +47,7 @@ function addToFav(e) {
 
 function searchMeal(e) {
     const mealName = (e.innerHTML).trim();
-    window.location.href = `./dishPage.html?dishName=${mealName}`;
+    window.location.href = `./DishPage/dishPage.html?dishName=${mealName}`;
 }
 
 

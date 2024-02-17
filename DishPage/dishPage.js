@@ -15,7 +15,10 @@ async function getDishDetails() {
     <div class="dishcard">
         <div id="img-ing">
             <img width="300" height="300" src=${dishData.strMealThumb}>
-            <div id="ingredients" onclick="getIngredientsData()"> INGREDIENTS </div>
+            <div id="fav-div">
+                <div id="ingredients" onclick="getIngredientsData()"> INGREDIENTS </div>
+                <div style="margin-left:15px; cursor:pointer" onclick="addDishToFav()"><i class="fa-regular fa-heart" style="color: #ff0000;"></i></div>
+            </div>
             <div id="ing-list"></div>
             
         </div>
@@ -55,9 +58,8 @@ async function getDishDetails() {
 
 }
 
-function ingAndQuaData() {
-    console.log('bb')
-}
+
+
 
 function getIngredientsData() {
     const ing = document.getElementById('ingredients');
@@ -70,7 +72,6 @@ function getIngredientsData() {
     else {
         ingList.style.display = 'none'
     }
-
 }
 
 function toggleReadMore() {
@@ -90,6 +91,9 @@ function toggleReadMore() {
 
 getDishDetails();
 
-
-
-
+function addDishToFav() {
+    const getDishName = document.getElementById("")
+    console.log(dishData);
+    localStorage.setItem(dishData.strMeal, JSON.stringify(dishData));
+    console.log(localStorage.getItem(dishData.strMeal));
+}
